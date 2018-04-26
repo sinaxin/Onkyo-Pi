@@ -11,8 +11,13 @@
 //              is completed program is blocked (max send() duration is 61ms).
 //
 //---------------------------------------------------------------------------
-
-#include "Arduino.h"
+//
+// Authors: 	zatrax & sinaxin
+// Modified: 	2018-04-25
+// Description: Now supports the wiringPi library instad of Arduino.h. Tested
+//		on RaspberryPi 3, pin 15 (wpi mode).
+//
+//---------------------------------------------------------------------------- 
 #include "OnkyoRI.h"
 
 /// send command message to device

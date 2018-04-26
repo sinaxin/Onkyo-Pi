@@ -11,15 +11,24 @@
 //              is completed program is blocked (max send() duration is 61ms). 
 //
 //---------------------------------------------------------------------------
+//
+// Authors: 	zatrax & sinaxin
+// Modified: 	2018-04-25
+// Description: Now supports the wiringPi library instad of Arduino.h. Tested
+//		on RaspberryPi 3, pin 15 (wpi mode).
+//
+//---------------------------------------------------------------------------- 
 
 #ifndef ONKYORI_H
 #define ONKYORI_H 
+
+#include <wiringPi.h>
 
 class OnkyoRI
 {
   public:
     OnkyoRI() {}; 
-    OnkyoRI(int pin) {  _outputPin = pin; pinMode(_outputPin, OUTPUT);  digitalWrite(_outputPin, LOW); };    
+    OnkyoRI(int pin) { wiringPiSetup(); _outputPin = pin; pinMode(_outputPin, OUTPUT);  digitalWrite(_outputPin, LOW); };    
 
     ~OnkyoRI() {  };  
     
