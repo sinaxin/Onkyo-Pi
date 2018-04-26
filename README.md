@@ -8,6 +8,8 @@ Thanks a lot to zatrax for helping me in converting docbender's Onkyo-RI to usin
 A makefile has also been created for compiling the code with g++.
 Please compile on your Raspberry pi using the makefile (modify to your taste). Please also modify the main.cpp to the code you want to send.
 
+Please be sure to have WiringPi installed: http://wiringpi.com
+
 ## Connection
 To connect to the RI port is used 3.5mm mono jack. Tip is for data signal and sleeve is ground (GND). Data are sent via TTL logic. So it is easy to connect RI device to 5V MCU (Arduino). Just connect data signal to some output pin and connect GND between each other.
 
