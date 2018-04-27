@@ -11,7 +11,7 @@ Please compile on your Raspberry pi using the makefile (modify to your taste). P
 Please be sure to have WiringPi installed: http://wiringpi.com
 
 ## Connection
-To connect to the RI port is used 3.5mm mono jack. Tip is for data signal and sleeve is ground (GND). Data are sent via TTL logic. So it is easy to connect RI device to 5V MCU (Arduino). Just connect data signal to some output pin and connect GND between each other.
+To connect to the RI port is used 3.5mm mono jack. Tip is for data signal and sleeve is ground (GND). Data are sent via TTL logic. So it is easy to connect RI device to 3.3v serial (RPi). Just connect data signal to some output pin and connect GND between each other.
 
 ## Protocol
 Protocol description could be found at:
@@ -24,9 +24,6 @@ Protocol is pretty simple for implementation. In one message is transfered 12 bi
 
 ## Library
 * blocking - send() method blocks other program execution until whole command is sent. It takes up to 61 ms.
-
-## RI codes
-At mentioned sites are also listed codes for Onkyo devices. Unfortunnately none of the codes is not valid for my receiver TX-8020. To determine the valid codes I wrote a simple loop for Arduino (more below) that goes through the whole 12bit code range (0x0-0xFFF). Results are listed below commands.
 
 ### RI codes - receiver 
 Codes are valid for TX-8020 receiver. With a high probability it will work with other Onkyo receivers.
